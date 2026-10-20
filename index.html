@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Questionário interativo sobre opiniões e propostas políticas.">
+  <title>Questionário de opiniões</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <span class="eyebrow">QUESTIONÁRIO INTERATIVO</span>
+      <h1>Quais são as suas opiniões?</h1>
+      <p>Responda às perguntas e, no final, veja um resumo das suas respostas.</p>
+    </header>
+
+    <section id="quiz" class="panel" aria-live="polite">
+      <div class="progress-row">
+        <span id="progress-label">Pergunta 1 de 20</span>
+        <span id="progress-percent">5%</span>
+      </div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+      <h2 id="question-text"></h2>
+      <p class="hint">Escolha uma alternativa para continuar.</p>
+      <div id="answers" class="answers"></div>
+      <p id="validation" class="validation" role="alert"></p>
+      <div class="navigation">
+        <button id="back-button" class="button secondary" type="button">Voltar</button>
+        <button id="next-button" class="button primary" type="button">Próxima</button>
+      </div>
+    </section>
+
+    <section id="result" class="panel result-panel" hidden aria-live="polite">
+      <span class="eyebrow">QUESTIONÁRIO CONCLUÍDO</span>
+      <h2>Resumo das suas respostas</h2>
+      <p id="result-intro"></p>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <span class="summary-number" id="yes-count">0</span>
+          <span>Respostas “Sim”</span>
+        </div>
+        <div class="summary-card">
+          <span class="summary-number" id="no-count">0</span>
+          <span>Respostas “Não”</span>
+        </div>
+      </div>
+      <div class="bar-labels"><span>Sim</span><span>Não</span></div>
+      <div class="stacked-track">
+        <div id="yes-bar"></div><div id="no-bar"></div>
+      </div>
+      <h3>Suas respostas</h3>
+      <ol id="answer-summary" class="answer-summary"></ol>
+      <!-- <p class="disclaimer"></p> -->
+      <div class="navigation result-actions">
+        <button id="review-button" class="button secondary" type="button">Revisar respostas</button>
+        <button id="restart-button" class="button primary" type="button">Recomeçar</button>
+      </div>
+      <button id="share-button" class="button share-button" type="button">Compartilhar questionário</button>
+      <p id="share-status" class="hint" role="status"></p>
+    </section>
+
+    <footer>Questionário independente • Respostas ficam neste dispositivo durante a sessão.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
