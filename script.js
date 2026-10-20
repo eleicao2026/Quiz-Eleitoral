@@ -78,14 +78,18 @@ function showResult() {
   document.querySelector("#no-count").textContent = no;
 
   let mensagem;
-
-  if (yes > no) {
-    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que alguẽm escolheu por vocë!`;
+  
+  if (skipped > yes && skipped > no) {
+    mensagem = `Você preferiu não responder à maioria das perguntas. Alguém escolheu por vocë!.`;
+  } else if (yes > no) {
+    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Flávio, vote 22!`;
   } else if (no > yes) {
-    mensagem = `Você respondeu "Não" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Lula!`;
+    mensagem = `Você respondeu "Não" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Lula, vote 13!`;
   } else {
-    mensagem = `Você teve a mesma quantidade de respostas Sim e Não: ${yes} de cada.`;
+    mensagem = `Você teve a mesma quantidade de respostas Sim e Não.`;
   }
+
+  if(skipped > yes) and (skipped > no)
 
   if (skipped > 0) {
     mensagem += ` Você também optou por não responder ${skipped} pergunta(s).`;
