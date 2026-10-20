@@ -80,7 +80,7 @@ function showResult() {
   let mensagem;
 
   if (yes > no) {
-    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Flávio!`;
+    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que alguẽm escolheu por vocë!`;
   } else if (no > yes) {
     mensagem = `Você respondeu "Não" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Lula!`;
   } else {
