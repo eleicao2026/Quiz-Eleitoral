@@ -89,12 +89,6 @@ function showResult() {
     mensagem = `Você teve a mesma quantidade de respostas Sim e Não.`;
   }
 
-  if(skipped > yes) and (skipped > no)
-
-  if (skipped > 0) {
-    mensagem += ` Você também optou por não responder ${skipped} pergunta(s).`;
-  }
-
   document.querySelector("#result-intro").textContent = mensagem;
 
   const answered = Math.max(yes + no, 1);
