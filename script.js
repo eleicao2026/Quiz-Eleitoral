@@ -82,9 +82,9 @@ function showResult() {
   if (skipped > yes && skipped > no) {
     mensagem = `Você preferiu não responder à maioria das perguntas. Alguém escolheu por você!.`;
   } else if (yes > no) {
-    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Flávio, vote 22!`;
+    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que você está mais alinhado(a) com as propostas e ideias do candidato Flávio, vote 22!`;
   } else if (no > yes) {
-    mensagem = `Você respondeu "Não" à maioria das perguntas: Isso quer dizer que você está mais alinhado com as propostas e idéias do candidato Lula, vote 13!`;
+    mensagem = `Você respondeu "Não" à maioria das perguntas: Isso quer dizer que você está mais alinhado(a) com as propostas e ideias do candidato Lula, vote 13!`;
   } else {
     mensagem = `Você teve a mesma quantidade de respostas Sim e Não. Melhor se decidir, senão algém irá decidir por você!`;
   }
