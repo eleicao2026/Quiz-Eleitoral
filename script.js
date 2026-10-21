@@ -3,16 +3,12 @@ const questions = [
   "Você concorda com a exploração do Brasil pelos EUA?",
   "Você é a favor de orgias com menores de idade refugiadas de guerra?",
   "Você é a favor de a Polícia Federal não investigar nenhum político corrupto?",
-  "Você concorda com a perseguição à Igreja Católica?",
   "Você concorda com a perseguição ao direito de professar uma fé só porque alguém pensa diferente?",
-  "Você concorda em vender estatais com desconto de 90% para estrangeiros?",
-  "Você concorda com a livre exploração dos recursos naturais do Brasil por outros países?",
   "Você é a favor de crianças terem acesso a armas de fogo, podendo causar mortes acidentais?",
   "Você é a favor de Daniel Vorcaro, do Banco Master, ser inocentado?",
   "Você é a favor de políticos bancarem regalias eróticas a ministros do STF em troca de favores?",
   "Você concorda com a venda de empresas como a Petrobras, que gera empregos e lucro?",
   "Você concorda que um presidente seja eleito sem propostas?",
-  "Você acha justo que o salário mínimo não tenha aumento acima da inflação?",
   "Você acha justo se aposentar só com 70 anos?",
   "Você acha justo o valor da aposentadoria não receber reajuste?",
   "Você acha justo o SUS não oferecer mais tratamentos e vacinação gratuitos?",
@@ -80,11 +76,11 @@ function showResult() {
   let mensagem;
   
   if (skipped > yes && skipped > no) {
-    mensagem = `Você preferiu não responder à maioria das perguntas. Alguém escolheu por você!.`;
+    mensagem = `Você preferiu não responder à maioria das perguntas. Que pena! Você deixou outro(a) escolher por você.`;
   } else if (yes > no) {
-    mensagem = `Você respondeu "Sim" à maioria das perguntas: Isso quer dizer que você está mais alinhado(a) com as propostas e ideias do candidato Flávio, vote 22!`;
+    mensagem = `Você respondeu "Sim" à maioria das perguntas: Sinto muito, você votou 22, pela perda de sua liberdade e direitos!`;
   } else if (no > yes) {
-    mensagem = `Você respondeu "Não" à maioria das perguntas: Isso quer dizer que você está mais alinhado(a) com as propostas e ideias do candidato Lula, vote 13!`;
+    mensagem = `Você respondeu "Não" à maioria das perguntas: Parabéns! Você votou 13, pela Soberania e garantia de nossos DIREITOS!`;
   } else {
     mensagem = `Você teve a mesma quantidade de respostas Sim e Não. Melhor se decidir, senão algém irá decidir por você!`;
   }
